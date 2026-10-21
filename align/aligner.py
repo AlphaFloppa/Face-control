@@ -21,13 +21,11 @@ def align_face(
     
     src = landmarks.astype(np.float32)
     
-    # Ищем аффинное преобразование
     M, _ = cv2.estimateAffinePartial2D(src, REFERENCE_LANDMARKS)
     
     if M is None:
         return None
     
-    # Применяем
     aligned = cv2.warpAffine(
         frame,
         M,

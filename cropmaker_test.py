@@ -3,7 +3,7 @@ from capture.webcam import WebcamSource
 from align.aligner import align_face
 import cv2
 
-cam = WebcamSource(width = 640, height = 480)
+cam = WebcamSource(width = 1280, height = 720)
 isSuccess, frame = cam.get_frame()
 if isSuccess:
     face = get_faces(frame)[0]
