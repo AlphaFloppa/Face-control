@@ -9,6 +9,6 @@ if isSuccess:
     face = get_faces(frame)[0]
     landmarks = face[4:14].reshape(5, 2)
     aligned_face = align_face(frame, landmarks)
-    cv2.imwrite('test.png', aligned_face)
+    cv2.imwrite('crop.png', aligned_face)
 
 

@@ -19,4 +19,4 @@ def get_faces(frame) -> [] | None:
 # 3. Детекция — frame это numpy.ndarray
     retval, faces = detector.detect(frame)
 
-    return faces if retval else []
+    return faces if retval else None
